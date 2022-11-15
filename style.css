@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #050801;
+    color: #fff;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+    font-family: sans-serif;
+    justify-content: space-evenly;
+
+}
+h2 {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-transform: uppercase;
+    transition: 2s;
+    letter-spacing:4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+h2:hover {
+    background: #000;
+    color: #03e964;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e964,
+    0 0 50px #03e9f4,
+    0 0 200px #050801;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0003);
+}
+h2:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+h2:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+h2 span {
+    position: absolute;
+    display: block;
+}
+h2 span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: x 1s linear infinite;
+}
+@keyframes x {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+h2 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: q 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes q {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+h2 span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,red);
+    animation: f 1s linear infinite;
+}
+@keyframes f {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+h2 span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,red);
+    animation: g 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes g {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
